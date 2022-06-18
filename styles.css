@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11rem;
+    background: black;
+}
+.boton{
+    width: 2rem;
+    background: rgb(255, 238, 0);
+    border-radius: 100px;
+}
+
+.boton,.boton::before,.boton::after{
+    content: "";
+    display: grid;
+    grid-area: 1/1;
+    aspect-ratio: 1;
+    border-radius: 100px;
+    box-shadow: 0 0 0 0 #ff03;
+    animation: b 1s linear infinite var(--s,0s) ;
+}
+
+.boton::before{
+    --s: 1s;
+}
+.boton::after{
+    --s: 2s;
+}
+
+@keyframes b {
+    to { box-shadow: 0 0 0 6rem #000;}
+}
+
+
